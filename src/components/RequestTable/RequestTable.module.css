@@ -1,0 +1,21 @@
+.requestList {
+  padding: 20px;
+  overflow-y: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.requestItem {
+  min-width: 600px;
+}
+
+.tableRowActive {
+  background-color: rgb(142, 209, 240);
+}
+
+.ant-table-wrapper {
+  clear: both;
+  min-width: 500px;
+}
