@@ -1,0 +1,13 @@
+.requests {
+  position: relative;
+  height: 100%;
+}
+
+.splitter {
+  background: #000;
+  opacity: 0.5;
+  z-index: 1;
+  cursor: col-resize;
+  width: 3px;
+  margin: 0 5px;
+}
