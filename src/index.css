@@ -35,3 +35,12 @@ table {
 html, #root, .App {
   height: 100%;
 }
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-control-container div .leaflet-routing-container {
+  display: none;
+}

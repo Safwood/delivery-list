@@ -11,7 +11,7 @@ export const columns = [
     key: 'name',
   },
   {
-    title: 'Загрузка',
+    title: 'Погрузка',
     dataIndex: 'loading',
     render: (address: string, record: { key: number }) => {
     return data.length >= 1 ? (
@@ -19,7 +19,7 @@ export const columns = [
       ) : null},
   },
   {
-    title: 'Выгрузка',
+    title: 'Разгрузка',
     dataIndex: 'unloading', 
     render: (address: string,  record: { key: number }) =>
     data.length >= 1 ? (
