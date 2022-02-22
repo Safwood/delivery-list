@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Polyline, useMapEvents } from 'react-leaflet'
+import { MapContainer, TileLayer } from 'react-leaflet'
 import styles from './Map.module.css';
 import { LatLngExpression, Map as LeafletMap } from 'leaflet';
+import { RoutingMachine } from '../RoutingMashine'
 
 type Props = {
   [key: string]: LatLngExpression,
 }
-
-const polyline: LatLngExpression[] = [
-  [55.752886, 37.622917],
-  [55.7551, 37.621],
-  [55.7551, 37.6292],
-]
-
-const options = { color: 'lime' }
 
 const Map: React.FC<Props> = ({ pointA, pointB }) => {
   const [map, setMap] = useState<LeafletMap | null>(null)
@@ -45,9 +38,7 @@ const Map: React.FC<Props> = ({ pointA, pointB }) => {
     whenCreated={(map: LeafletMap) => setMap(map)}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={pointA}><Popup>Погрузка</Popup></Marker>
-      <Marker position={pointB}><Popup>Разгрузка</Popup></Marker>
-      <Polyline pathOptions={options} positions={polyline} />
+      <RoutingMachine />
     </MapContainer>
   );
 }
