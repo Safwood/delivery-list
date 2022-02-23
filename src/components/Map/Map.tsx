@@ -5,7 +5,7 @@ import { LatLngExpression, Map as LeafletMap } from 'leaflet';
 import { requestsSelector } from '../../redux/requests/requestsSelectors';
 import { useSelector } from 'react-redux';
 import "leaflet-routing-machine";
-import { Routing } from '../RoutingMashine';
+import { Routing } from '../RoutingMachine';
 import { Request } from '../../types';
 
 const L = require('leaflet');
